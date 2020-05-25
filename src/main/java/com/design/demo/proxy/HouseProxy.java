@@ -7,8 +7,8 @@ public class HouseProxy implements IProxy {
 
     private House house;
 
-    public HouseProxy(House house) {
-        this.house = house;
+    public HouseProxy() {
+        this.house = new House();
     }
 
     public void search() {
@@ -30,8 +30,7 @@ public class HouseProxy implements IProxy {
 
 class TestM{
     public static void main(String[] args) {
-        House house = new House();
-        HouseProxy houseProxy = new HouseProxy(house);
+        HouseProxy houseProxy = new HouseProxy();
         houseProxy.lease();
     }
 }
